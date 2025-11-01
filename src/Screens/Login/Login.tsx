@@ -13,7 +13,7 @@ type LoginProps = {
 };
 
 
-export function Login(props: LoginProps): JSX.Element {
+export function Login(props: LoginProps) {
   const [emailI, setEmailI] = useState("");
   const [passwordI, setPasswordI] = useState("");
   const [submited, setSubmited] = useState<string[]>([]);

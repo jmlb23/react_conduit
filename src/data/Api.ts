@@ -38,7 +38,7 @@ interface Api {
 }
 
 class ApiImpl implements Api {
-  private url = (...arg: string[]) => `https://conduit.productionready.io/api/${arg.join("/")}`;
+  private url = (...arg: string[]) => `https://api.realworld.show/api/${arg.join("/")}`;
 
   private middleware(response: Response): Response | Errors {
     return response.ok ? response : construct(response.status);

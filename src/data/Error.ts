@@ -6,11 +6,11 @@ export type Errors =
   | { message: "error", code: number };
 
 export function isErrors<T>(t: T | Errors): t is Errors {
-  return "message" in t
+  return typeof t === "object" && t !== null && "message" in t
 }
 
 export function isOther<T>(t: T | Errors): t is T {
-  return !("message" in t) || t !== undefined
+  return !isErrors(t)
 }
 
 export function construct(code: number): Errors {

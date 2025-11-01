@@ -11,7 +11,7 @@ type SignupProps = {
 
 };
 
-export function Signup(props: SignupProps): JSX.Element {
+export function Signup(props: SignupProps) {
 
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
