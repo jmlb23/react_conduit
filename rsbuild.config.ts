@@ -18,6 +18,7 @@ export default defineConfig({
     define: {
       ...publicVars,
       'process.env': JSON.stringify(rawPublicVars),
+      'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL || '')
     },
   },
 });
