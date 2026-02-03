@@ -1,5 +1,4 @@
-import { type } from "os";
-import React, { PropsWithChildren, ReactNode } from "react";
+import React, { PropsWithChildren } from "react";
 import { useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { AppState } from "../State/Reducers";
@@ -10,8 +9,6 @@ type GuardPropsWithChildren = PropsWithChildren<GuardProps>
 export const Guard = (props: GuardPropsWithChildren) => {
   const token = useSelector<AppState>((s) => s.token)
   return (
-    <>
-      token !== null ? props.children : <Redirect to={props.to} />
-    </>
+    token !== null ? props.children : <Redirect to={props.to} />
   )
 }
